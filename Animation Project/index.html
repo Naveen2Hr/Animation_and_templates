@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pro Travellers</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" class="brand">Travel Life</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation_items">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="bookings.html">Register</a>
+          <a href="#">Login</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video
+        class="video-slide active"
+        src="Videos/1.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="video-slide"
+        src="Videos/2.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="video-slide"
+        src="Videos/Newyork.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="video-slide"
+        src="Videos/happy.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <video
+        class="video-slide"
+        src="Videos/5.mp4"
+        autoplay
+        muted
+        loop
+      ></video>
+      <div class="content active">
+        <h1>Welcome<br /><span>Pro-Travelers</span></h1>
+        <p>
+          Travelling is the joy of life.<br />
+          Never compromise for the plan.<br />
+          there we can help you with that.<br />
+        </p>
+        <!-- <a href="#">Read More</a> -->
+      </div>
+      <div class="content">
+        <h1><br /><span>Best Treking spots</span></h1>
+        <p>
+          Best Trekking experience with all the facilities .<br />
+          Never Have a refreshing expeirnece.
+        </p>
+        <!-- <a href="#">Read More</a> -->
+      </div>
+      <div class="content">
+        <h1>Famous Cities<br /><span>Faster Life</span></h1>
+        <p>
+          Famous Cities and Life of a Newyork and other cities.<br />
+          Your experiences main goal.<br />
+        </p>
+        <!-- <a href="#">Read More</a> -->
+      </div>
+      <div class="content">
+        <h1>Customer<br /><span>Satisfaction</span></h1>
+        <p>
+          Your Satifaction is the Big Acheivement for us.<br />
+          Just live to the fullest.<br />
+        </p>
+        <!-- <a href="#">Read More</a> -->
+      </div>
+      <div class="content">
+        <h1>Start.<br /><span>Booking</span></h1>
+        <p>
+          Most Precious place id nature.<br />
+          Faster Bookings.<br />
+          Never fails to amaze each and everytime you visit.
+        </p>
+        <!-- <a href="#">Read More</a> -->
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      const menuBtn = document.querySelector(".menu-btn");
+      const navigation = document.querySelector(".navigation");
+
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+      });
+
+      //javascript for the video slider navigation
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".video-slide");
+      const contents = document.querySelectorAll(".content");
+
+      var sliderNav = function (manual) {
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+      };
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
+    </script>
+  </body>
+</html>
