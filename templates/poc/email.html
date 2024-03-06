@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asset</title>
+    <style>
+      body {
+        font-family: "Trebuchet MS", sans-serif;
+      }
+
+      #asset {
+        border-collapse: collapse;
+        width: 100%;
+        border-color: #6440dd;
+        padding: 10px;
+        margin: initial;
+      }
+
+      #employee {
+        border: darkslategray;
+        padding: 20px;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      #endCard {
+        border: thick;
+        background-color: powderblue;
+        padding-left: 10px;
+      }
+
+      #asset td,
+      #asset th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: center;
+      }
+
+      #asset tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      #asset tr:hover {
+        background-color: #ddd;
+      }
+
+      #asset th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #6440dd;
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="employee">
+      Hi ${customer.customerName} ,<br />
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Below are Your Asset
+      assgined details.<br /><br /><br />
+      &nbsp; &nbsp; &nbsp; Name &nbsp; &nbsp;::
+      ${customer.customerName}.<br />
+      &nbsp; &nbsp; &nbsp; Email &nbsp; &nbsp;::
+      ${customer.customerEmail}.<br />
+      &nbsp; &nbsp; &nbsp; Date&nbsp; &nbsp; &nbsp; :: ${date}.<br />
+    </div>
+    <br />
+    <br />
+    <br />
+    <table id="asset">
+      <tr>
+        <th colspan="2">Customer Registration Details</th>
+      </tr>
+      <tr>
+        <td>Id</td>
+        <td>${customer.customerId}</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>${customer.customerName}</td>
+      </tr>
+      <tr>
+        <td>Contact</td>
+        <td>${customer.customerContact}</td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>${customer.customerGender}</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>${customer.customerEmail}</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+    <div id="endCard">
+		<h5>
+			Thanks and Regards<br /> Customer Service E^Shoppers
+		</h5>
+		<h3 style="color: blue">E^Shoppers India</h3>
+		<h5></h5>
+	</div>
+  </body>
+</html>
